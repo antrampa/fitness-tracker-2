@@ -1,0 +1,27 @@
+.signup-form {
+    margin: 0 auto;
+    padding-top: 10px;
+   
+}
+
+.fx-main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
+}
+
+mat-form-field  {
+    width:300px;
+}
+
+/*
+display: flex;
+flex-direction: row // fxLayout
+flex-wrap: wrap //fxLayout
+box-sizing: border-box;
+align-content: stretch, // fxLayoutAlign
+align-items: stretch, // fxLayoutAlign
+justify-content: flex-start, // fxLayoutAlign
+*/
