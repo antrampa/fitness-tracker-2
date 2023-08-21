@@ -1,31 +1,27 @@
 <section class="login-form">
-    <form class="fx-main" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <form class="fx-main" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <mat-form-field>
             <mat-label>E-Mail</mat-label>
             <input matInput 
                 type="email" 
                 placeholder="Your email"
-                ngModel 
-                name="email"
-                email
-                required
-                #emailInput="ngModel">
-            <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty.</mat-error>
-            <mat-error *ngIf="!emailInput.hasError('required')">E-Mail is invalid</mat-error>
+                formControlName="email">
+            <mat-hint>Please enter a valid email.</mat-hint>
+            <!-- <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty.</mat-error>  -->
+            <mat-error>Invalid or missing email.</mat-error> 
         </mat-form-field>
         <mat-form-field>
             <mat-label>Password</mat-label>
             <input matInput 
                 type="password"
                 placeholder="Your password"
-                ngModel
-                name="password"
-                required>
+                formControlName="password">
+            <mat-hint>Please enter your password.</mat-hint>
             <mat-error>Field must not be empty</mat-error>
         </mat-form-field>
         <button type="submit" 
             mat-raised-button 
-            color="primary"
-            [disabled]="f.invalid">Login</button>
+            color="primary" 
+            [disabled]="loginForm.invalid">Login</button>
     </form>
 </section>
