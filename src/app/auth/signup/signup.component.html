@@ -29,12 +29,29 @@
         </mat-form-field>
         <mat-form-field appearance="fill">
             <mat-label>Birthday</mat-label>
-            <input matInput [matDatepicker]="picker" placeholder="Your Birthday">
+            <input matInput 
+                [matDatepicker]="picker" 
+                [max]="maxDate"
+                placeholder="Your Birthday"
+                ngModel
+                name="birday"
+                required>
             <mat-hint>MM/DD/YYYY</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker-toggle 
+                matIconSuffix 
+                [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
          </mat-form-field>
+         <mat-checkbox 
+            labelPosition="after"
+            ngModel
+            name="agree"
+            required
+            color="primary">Agree to Terms and Conditions.</mat-checkbox>
 
-        <button type="submit" mat-raised-button color="primary">Submit</button>
+        <button type="submit" 
+            mat-raised-button 
+            color="primary"
+            [disabled]="f.invalid">Submit</button>
     </form>
 </section>
