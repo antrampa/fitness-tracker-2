@@ -45,6 +45,11 @@ a:active {
     display: none;
 }
 
+.nav-caption {
+    display: inline-block;
+    padding-left: 6px;
+}
+
 @media only screen and (max-width:600px) {
     .navigation-menu {
         display: flex;
