@@ -40,3 +40,17 @@ a:active {
     padding: 0;
     margin: 0;
 }
+
+.navigation-menu {
+    display: none;
+}
+
+@media only screen and (max-width:600px) {
+    .navigation-menu {
+        display: flex;
+    }
+
+    .navigation-items {
+        display: none;
+    }
+}
