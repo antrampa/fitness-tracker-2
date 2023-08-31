@@ -11,3 +11,10 @@ align-content: stretch, // fxLayoutAlign
 align-items: stretch, // fxLayoutAlign
 justify-content: flex-start, // fxLayoutAlign
 */
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
+}
