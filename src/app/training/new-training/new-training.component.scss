@@ -1,0 +1,12 @@
+.new-training {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+mat-card {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
